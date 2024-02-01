@@ -1,0 +1,137 @@
+body {
+    background-color: var(--neutro-escuro);
+    font-family: "Outfit", sans-serif;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 25px;
+}
+
+.cartao {
+    max-width: 350px;
+    background-color: var(--neutro-medio);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.cartao .link-imagem {
+    position: relative;
+    display: flex;
+}
+
+.cartao .link-imagem .imagem {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.cartao .link-imagem::before{
+    content: '';
+    background-color: cyan;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.3;
+    display: none;
+}
+
+.cartao .link-imagem::after{
+    content: '';
+    background: url(../images/icon-view.svg) no-repeat center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    display: none;
+}
+
+.cartao .link-imagem:hover::before,
+.cartao .link-imagem:hover::after {
+    display: block;
+}
+
+
+.cartao .link-titulo .titulo {
+    font-size: 22px;
+    color: #ffffff;
+    margin: 25px 0 20px;
+}
+
+.cartao .link-titulo .titulo:hover{
+    color: var(--primária-media);
+}
+
+.cartao .sobre {
+    color: var(--primária-suave);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    margin-bottom: 24px;
+}
+
+.cartao .informacoes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+}
+
+.cartao .informacoes .preco {
+    color: var(--primária-media);
+    display: flex;
+}
+
+.cartao .informacoes .preco::before {
+    content: '';
+    background-image: url(../images/icon-ethereum.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.cartao .informacoes .dias-restante {
+    color: var(--primária-suave);
+    display: flex;
+}
+
+.cartao .informacoes .dias-restante::before {
+    content: '';
+    background-image: url(../images/icon-clock.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.cartao .criador {
+    display: flex;
+    align-items: center;
+    border-top: solid 1px var(--neutro-suave);
+    padding-top: 15px;
+}
+
+.cartao .criador .foto-criador {
+    max-width: 35px;
+    border: solid 1px #ffffff;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.cartao .criador .texto {
+    color: var(--primária-suave);
+}
+
+.cartao .criador .nome {
+    color: #ffffff;
+}
+
+.cartao .criador .nome:hover{
+    color: var(--primária-media);
+}
